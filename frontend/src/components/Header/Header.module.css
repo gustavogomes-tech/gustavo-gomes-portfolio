@@ -22,8 +22,16 @@
     text-decoration: none;
 }
 
-.logo span {
-    color: var(--color-primary);
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
 }
 
 .navigation {

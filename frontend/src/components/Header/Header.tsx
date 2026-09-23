@@ -5,7 +5,10 @@ function Header() {
         <header className={styles.header}>
             <div className={`container ${styles.content}`}>
                 <a href="#" className={styles.logo}>
-                    Gustavo<span>.</span>
+                    <img
+                        src="/images/gustavo-logo.png"
+                        alt="Gustavo Gomes"
+                    />
                 </a>
                 <nav className={styles.navigation}>
                     <a href="#about">Sobre</a>
