@@ -1,0 +1,127 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background: var(--color-background);
+}
+
+.content {
+    max-width: 900px;
+}
+
+.label {
+    color: var(--color-primary);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.content h1 {
+    max-width: 850px;
+    margin: 20px 0 12px;
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.content h1 strong {
+    color: var(--color-primary);
+}
+
+.content h2 {
+    max-width: 760px;
+    margin: 0;
+    color: #cbd5e1;
+    font-size: clamp(24px, 4vw, 38px);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.content p {
+    max-width: 680px;
+    margin-top: 28px;
+    color: var(--color-text-secondary);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.technologies span {
+    padding: 8px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: #111827;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.primaryButton,
+.secondaryButton {
+    min-width: 140px;
+    padding: 14px 22px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition:
+            transform 0.2s,
+            border-color 0.2s,
+            background 0.2s;
+}
+
+.primaryButton {
+    background: var(--color-primary);
+    color: #082f49;
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+}
+
+.secondaryButton {
+    border: 1px solid #334155;
+    color: var(--color-text);
+}
+
+.secondaryButton:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding-top: 140px;
+        padding-bottom: 80px;
+    }
+
+    .content h1 {
+        letter-spacing: -2px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+    }
+}

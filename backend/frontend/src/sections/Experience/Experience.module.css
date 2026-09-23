@@ -1,0 +1,143 @@
+.experience {
+    padding: 120px 0;
+    background: var(--color-background);
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin-left: 60px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 0;
+    left: 6px;
+    width: 1px;
+    background: var(--color-border);
+}
+
+.item {
+    position: relative;
+    padding-left: 48px;
+    padding-bottom: 65px;
+}
+
+.item:last-child {
+    padding-bottom: 0;
+}
+
+.marker {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-background);
+    z-index: 2;
+}
+
+.card {
+    padding: 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-background-secondary);
+    transition:
+            transform 0.2s ease,
+            border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: #334155;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header h3 {
+    margin: 0 0 6px;
+    color: var(--color-text);
+    font-size: 21px;
+}
+
+.company {
+    color: var(--color-primary);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.period {
+    flex-shrink: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.card p {
+    max-width: 680px;
+    margin: 22px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.tags span {
+    padding: 6px 11px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: #111827;
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .experience {
+        padding: 80px 0;
+    }
+
+    .timeline {
+        margin-left: 0;
+    }
+
+    .item {
+        padding-left: 35px;
+        padding-bottom: 40px;
+    }
+
+    .marker {
+        width: 11px;
+        height: 11px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .header h3 {
+        font-size: 19px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}

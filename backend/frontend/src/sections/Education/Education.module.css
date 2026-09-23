@@ -1,0 +1,200 @@
+.education {
+    padding: 120px 0;
+    background: var(--color-background-secondary);
+}
+
+.intro {
+    max-width: 650px;
+    margin: -30px 0 55px;
+    color: var(--color-text-secondary);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.block + .block {
+    margin-top: 70px;
+}
+
+.blockTitle {
+    margin: 0 0 25px;
+    color: #cbd5e1;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Graduação */
+
+.graduationGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.educationCard {
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    background: var(--color-background);
+    transition:
+            transform 0.25s ease,
+            border-color 0.25s ease;
+}
+
+.educationCard:hover {
+    transform: translateY(-4px);
+    border-color: #334155;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.type,
+.courseType {
+    display: inline-flex;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status {
+    display: inline-flex;
+    padding: 5px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-text-secondary);
+    font-size: 11px;
+}
+
+.educationCard h4,
+.courseCard h4 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 22px;
+}
+
+.institution {
+    display: block;
+    margin-top: 8px;
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.period {
+    display: block;
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.educationCard p {
+    margin: 22px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Cursos */
+
+.courseGrid {
+    display: grid;
+    gap: 14px;
+}
+
+.courseCard {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    align-items: center;
+    padding: 24px 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-background);
+    transition:
+            transform 0.2s ease,
+            border-color 0.2s ease;
+}
+
+.courseCard:hover {
+    transform: translateX(4px);
+    border-color: #334155;
+}
+
+.courseType {
+    margin-bottom: 12px;
+}
+
+.courseCard h4 {
+    font-size: 18px;
+}
+
+.courseCard .period {
+    text-align: right;
+}
+
+.tags {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.tags span {
+    padding: 5px 9px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-text-secondary);
+    font-size: 11px;
+}
+
+.certificate {
+    display: block;
+    margin-top: 15px;
+    color: var(--color-primary);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    text-decoration: none;
+}
+
+.certificate:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .education {
+        padding: 80px 0;
+    }
+
+    .intro {
+        margin-top: -15px;
+        font-size: 15px;
+    }
+
+    .graduationGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .courseCard {
+        grid-template-columns: 1fr;
+    }
+
+    .courseCard .period,
+    .certificate {
+        text-align: left;
+    }
+
+    .tags {
+        justify-content: flex-start;
+    }
+}

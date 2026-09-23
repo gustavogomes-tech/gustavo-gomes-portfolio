@@ -1,0 +1,39 @@
+.projects {
+    padding: 120px 0;
+    background: var(--color-background-secondary);
+}
+
+.intro {
+    max-width: 620px;
+    margin: -30px 0 50px;
+    color: var(--color-text-secondary);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid > :first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 80px 0;
+    }
+
+    .intro {
+        margin-top: -15px;
+        font-size: 15px;
+    }
+}
